@@ -1,0 +1,182 @@
+[
+  {
+    "event_id": "h1a2b3c4-d5e6-7890-f1g2-h3i4j5k6l7m",
+    "timestamp": "2023-10-31T08:00:00Z",
+    "event_type": "user_login",
+    "details": {"user_id": 12345, "ip_address": "192.168.1.7", "status": "success"}
+  },
+  {
+    "event_id": "h2b3c4d5-e6f7-8901-g2h3-i4j5k6l7m8n",
+    "timestamp": "2023-11-01T14:20:00Z",
+    "event_type": "product_view",
+    "details": {"user_id": 67890, "product_id": 110, "page": "/product/110"}
+  },
+  {
+    "event_id": "h3c4d5e6-f7g8-9012-h3i4-j5k6l7m8n9o",
+    "timestamp": "2023-11-02T12:00:00Z",
+    "event_type": "order_placed",
+    "details": {"user_id": 54321, "order_id": "O1007", "total_amount": 300.00}
+  },
+  {
+    "event_id": "h4d5e6f7-g8h9-0123-i4j5-k6l7m8n9o0p",
+    "timestamp": "2023-11-03T17:45:00Z",
+    "event_type": "user_logout",
+    "details": {"user_id": 98765, "ip_address": "192.168.1.8", "session_duration": "1h 45m"}
+  },
+  {
+    "event_id": "h5e6f7g8-h9i0-1234-j5k6-l7m8n9o0p1q",
+    "timestamp": "2023-11-04T09:40:00Z",
+    "event_type": "cart_update",
+    "details": {"user_id": 11223, "product_id": 101, "action": "add", "quantity": 1}
+  },
+  {
+    "event_id": "h6f7g8h9-i0j1-2345-k6l7-m8n9o0p1q2r",
+    "timestamp": "2023-11-05T13:15:00Z",
+    "event_type": "payment_failed",
+    "details": {"user_id": 33445, "order_id": "O1008", "reason": "expired_card"}
+  },
+  {
+    "event_id": "h7g8h9i0-j1k2-3456-l7m8-n9o0p1q2r3s",
+    "timestamp": "2023-11-06T19:30:00Z",
+    "event_type": "user_registration",
+    "details": {"user_id": 55667, "email": "user55667@example.com", "status": "success"}
+  },
+  {
+    "event_id": "h8h9i0j1-k2l3-4567-m8n9-o0p1q2r3s4t",
+    "timestamp": "2023-11-07T11:00:00Z",
+    "event_type": "product_review",
+    "details": {"user_id": 77889, "product_id": 102, "rating": 4, "review_id": "R1004"}
+  },
+  {
+    "event_id": "h9i0j1k2-l3m4-5678-n9o0-p1q2r3s4t5u",
+    "timestamp": "2023-11-08T16:40:00Z",
+    "event_type": "search_query",
+    "details": {"user_id": 99001, "query": "smartwatches", "results_count": 30}
+  },
+  {
+    "event_id": "h0j1k2l3-m4n5-6789-o0p1-q2r3s4t5u6v",
+    "timestamp": "2023-11-09T21:15:00Z",
+    "event_type": "password_reset",
+    "details": {"user_id": 22334, "email": "user22334@example.com", "status": "success"}
+  },
+  {
+    "event_id": "i1a2b3c4-d5e6-7890-f1g2-h3i4j5k6l7m",
+    "timestamp": "2023-11-10T08:15:00Z",
+    "event_type": "user_login",
+    "details": {"user_id": 12345, "ip_address": "192.168.1.9", "status": "success"}
+  },
+  {
+    "event_id": "i2b3c4d5-e6f7-8901-g2h3-i4j5k6l7m8n",
+    "timestamp": "2023-11-11T14:25:00Z",
+    "event_type": "product_view",
+    "details": {"user_id": 67890, "product_id": 103, "page": "/product/103"}
+  },
+  {
+    "event_id": "i3c4d5e6-f7g8-9012-h3i4-j5k6l7m8n9o",
+    "timestamp": "2023-11-12T12:10:00Z",
+    "event_type": "order_placed",
+    "details": {"user_id": 54321, "order_id": "O1009", "total_amount": 350.00}
+  },
+  {
+    "event_id": "i4d5e6f7-g8h9-0123-i4j5-k6l7m8n9o0p",
+    "timestamp": "2023-11-13T17:50:00Z",
+    "event_type": "user_logout",
+    "details": {"user_id": 98765, "ip_address": "192.168.1.10", "session_duration": "2h 15m"}
+  },
+  {
+    "event_id": "i5e6f7g8-h9i0-1234-j5k6-l7m8n9o0p1q",
+    "timestamp": "2023-11-14T09:50:00Z",
+    "event_type": "cart_update",
+    "details": {"user_id": 11223, "product_id": 104, "action": "remove", "quantity": 1}
+  },
+  {
+    "event_id": "i6f7g8h9-i0j1-2345-k6l7-m8n9o0p1q2r",
+    "timestamp": "2023-11-15T13:30:00Z",
+    "event_type": "payment_failed",
+    "details": {"user_id": 33445, "order_id": "O1010", "reason": "insufficient_funds"}
+  },
+  {
+    "event_id": "i7g8h9i0-j1k2-3456-l7m8-n9o0p1q2r3s",
+    "timestamp": "2023-11-16T19:40:00Z",
+    "event_type": "user_registration",
+    "details": {"user_id": 55667, "email": "user55667@example.com", "status": "success"}
+  },
+  {
+    "event_id": "i8h9i0j1-k2l3-4567-m8n9-o0p1q2r3s4t",
+    "timestamp": "2023-11-17T11:10:00Z",
+    "event_type": "product_review",
+    "details": {"user_id": 77889, "product_id": 105, "rating": 5, "review_id": "R1005"}
+  },
+  {
+    "event_id": "i9i0j1k2-l3m4-5678-n9o0-p1q2r3s4t5u",
+    "timestamp": "2023-11-18T16:50:00Z",
+    "event_type": "search_query",
+    "details": {"user_id": 99001, "query": "tablets", "results_count": 28}
+  },
+  {
+    "event_id": "i0j1k2l3-m4n5-6789-o0p1-q2r3s4t5u6v",
+    "timestamp": "2023-11-19T21:20:00Z",
+    "event_type": "password_reset",
+    "details": {"user_id": 22334, "email": "user22334@example.com", "status": "success"}
+  },
+  {
+    "event_id": "j1a2b3c4-d5e6-7890-f1g2-h3i4j5k6l7m",
+    "timestamp": "2023-11-20T08:30:00Z",
+    "event_type": "user_login",
+    "details": {"user_id": 12345, "ip_address": "192.168.1.11", "status": "success"}
+  },
+  {
+    "event_id": "j2b3c4d5-e6f7-8901-g2h3-i4j5k6l7m8n",
+    "timestamp": "2023-11-21T14:35:00Z",
+    "event_type": "product_view",
+    "details": {"user_id": 67890, "product_id": 106, "page": "/product/106"}
+  },
+  {
+    "event_id": "j3c4d5e6-f7g8-9012-h3i4-j5k6l7m8n9o",
+    "timestamp": "2023-11-22T12:20:00Z",
+    "event_type": "order_placed",
+    "details": {"user_id": 54321, "order_id": "O1011", "total_amount": 400.00}
+  },
+  {
+    "event_id": "j4d5e6f7-g8h9-0123-i4j5-k6l7m8n9o0p",
+    "timestamp": "2023-11-23T17:55:00Z",
+    "event_type": "user_logout",
+    "details": {"user_id": 98765, "ip_address": "192.168.1.12", "session_duration": "2h 30m"}
+  },
+  {
+    "event_id": "j5e6f7g8-h9i0-1234-j5k6-l7m8n9o0p1q",
+    "timestamp": "2023-11-24T10:00:00Z",
+    "event_type": "cart_update",
+    "details": {"user_id": 11223, "product_id": 107, "action": "add", "quantity": 2}
+  },
+  {
+    "event_id": "j6f7g8h9-i0j1-2345-k6l7-m8n9o0p1q2r",
+    "timestamp": "2023-11-25T13:45:00Z",
+    "event_type": "payment_failed",
+    "details": {"user_id": 33445, "order_id": "O1012", "reason": "card_declined"}
+  },
+  {
+    "event_id": "j7g8h9i0-j1k2-3456-l7m8-n9o0p1q2r3s",
+    "timestamp": "2023-11-26T19:50:00Z",
+    "event_type": "user_registration",
+    "details": {"user_id": 55667, "email": "user55667@example.com", "status": "success"}
+  },
+  {
+    "event_id": "j8h9i0j1-k2l3-4567-m8n9-o0p1q2r3s4t",
+    "timestamp": "2023-11-27T11:20:00Z",
+    "event_type": "product_review",
+    "details": {"user_id": 77889, "product_id": 108, "rating": 3, "review_id": "R1006"}
+  },
+  {
+    "event_id": "j9i0j1k2-l3m4-5678-n9o0-p1q2r3s4t5u",
+    "timestamp": "2023-11-28T17:00:00Z",
+    "event_type": "search_query",
+    "details": {"user_id": 99001, "query": "cameras", "results_count": 18}
+  },
+  {
+    "event_id": "j0j1k2l3-m4n5-6789-o0p1-q2r3s4t5u6v",
+    "timestamp": "2023-11-29T21:25:00Z",
+    "event_type": "password_reset",
+    "details": {"user_id": 22334, "email": "user22334@example.com", "status": "success"}
+  }
+]

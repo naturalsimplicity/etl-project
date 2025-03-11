@@ -1,0 +1,104 @@
+{
+  "ModerationQueue": [
+    {
+      "review_id": "R1001",
+      "user_id": 12345,
+      "product_id": 101,
+      "review_text": "Отличный товар, всем рекомендую!",
+      "rating": 5,
+      "moderation_status": "pending",
+      "flags": [],
+      "submitted_at": "2023-10-01T12:00:00Z"
+    },
+    {
+      "review_id": "R1002",
+      "user_id": 67890,
+      "product_id": 102,
+      "review_text": "Качество на высоте, но цена завышена.",
+      "rating": 4,
+      "moderation_status": "pending",
+      "flags": ["price_concern"],
+      "submitted_at": "2023-10-02T15:00:00Z"
+    },
+    {
+      "review_id": "R1003",
+      "user_id": 54321,
+      "product_id": 103,
+      "review_text": "Товар сломался через неделю использования.",
+      "rating": 2,
+      "moderation_status": "pending",
+      "flags": ["defective_product"],
+      "submitted_at": "2023-10-03T13:00:00Z"
+    },
+    {
+      "review_id": "R1004",
+      "user_id": 98765,
+      "product_id": 104,
+      "review_text": "Быстрая доставка, товар соответствует описанию.",
+      "rating": 5,
+      "moderation_status": "approved",
+      "flags": [],
+      "submitted_at": "2023-10-04T17:30:00Z"
+    },
+    {
+      "review_id": "R1005",
+      "user_id": 11223,
+      "product_id": 105,
+      "review_text": "Не впечатлил, ожидал большего.",
+      "rating": 3,
+      "moderation_status": "pending",
+      "flags": ["low_quality"],
+      "submitted_at": "2023-10-05T10:00:00Z"
+    },
+    {
+      "review_id": "R1006",
+      "user_id": 33445,
+      "product_id": 106,
+      "review_text": "Отличное соотношение цены и качества!",
+      "rating": 5,
+      "moderation_status": "approved",
+      "flags": [],
+      "submitted_at": "2023-10-06T14:00:00Z"
+    },
+    {
+      "review_id": "R1007",
+      "user_id": 55667,
+      "product_id": 107,
+      "review_text": "Товар хороший, но доставка задержалась.",
+      "rating": 4,
+      "moderation_status": "pending",
+      "flags": ["delivery_issue"],
+      "submitted_at": "2023-10-07T19:00:00Z"
+    },
+    {
+      "review_id": "R1008",
+      "user_id": 77889,
+      "product_id": 108,
+      "review_text": "Покупкой доволен, всё работает отлично.",
+      "rating": 5,
+      "moderation_status": "approved",
+      "flags": [],
+      "submitted_at": "2023-10-08T11:00:00Z"
+    },
+    {
+      "review_id": "R1009",
+      "user_id": 99001,
+      "product_id": 109,
+      "review_text": "Товар не соответствует описанию на сайте.",
+      "rating": 1,
+      "moderation_status": "pending",
+      "flags": ["misleading_description"],
+      "submitted_at": "2023-10-09T15:30:00Z"
+    },
+    {
+      "review_id": "R1010",
+      "user_id": 22334,
+      "product_id": 110,
+      "review_text": "Отличный продукт, рекомендую к покупке!",
+      "rating": 5,
+      "moderation_status": "approved",
+      "flags": [],
+      "submitted_at": "2023-10-10T20:45:00Z"
+    }
+  ]
+}
