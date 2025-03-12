@@ -1,104 +1,102 @@
-{
-  "ProductPriceHistory": [
-    {
-      "product_id": 101,
-      "price_changes": [
-        {"date": "2023-01-01", "price": 50.00},
-        {"date": "2023-03-15", "price": 55.00},
-        {"date": "2023-06-01", "price": 60.00}
-      ],
-      "current_price": 60.00,
-      "currency": "USD"
-    },
-    {
-      "product_id": 102,
-      "price_changes": [
-        {"date": "2023-02-10", "price": 120.00},
-        {"date": "2023-04-20", "price": 110.00},
-        {"date": "2023-07-01", "price": 115.00}
-      ],
-      "current_price": 115.00,
-      "currency": "EUR"
-    },
-    {
-      "product_id": 103,
-      "price_changes": [
-        {"date": "2023-01-15", "price": 200.00},
-        {"date": "2023-05-01", "price": 180.00},
-        {"date": "2023-08-01", "price": 190.00}
-      ],
-      "current_price": 190.00,
-      "currency": "GBP"
-    },
-    {
-      "product_id": 104,
-      "price_changes": [
-        {"date": "2023-03-01", "price": 75.00},
-        {"date": "2023-06-15", "price": 80.00},
-        {"date": "2023-09-01", "price": 85.00}
-      ],
-      "current_price": 85.00,
-      "currency": "USD"
-    },
-    {
-      "product_id": 105,
-      "price_changes": [
-        {"date": "2023-04-01", "price": 150.00},
-        {"date": "2023-07-15", "price": 140.00},
-        {"date": "2023-10-01", "price": 145.00}
-      ],
-      "current_price": 145.00,
-      "currency": "EUR"
-    },
-    {
-      "product_id": 106,
-      "price_changes": [
-        {"date": "2023-05-10", "price": 90.00},
-        {"date": "2023-08-20", "price": 95.00},
-        {"date": "2023-11-01", "price": 100.00}
-      ],
-      "current_price": 100.00,
-      "currency": "USD"
-    },
-    {
-      "product_id": 107,
-      "price_changes": [
-        {"date": "2023-06-01", "price": 300.00},
-        {"date": "2023-09-15", "price": 280.00},
-        {"date": "2023-12-01", "price": 290.00}
-      ],
-      "current_price": 290.00,
-      "currency": "GBP"
-    },
-    {
-      "product_id": 108,
-      "price_changes": [
-        {"date": "2023-07-01", "price": 40.00},
-        {"date": "2023-10-15", "price": 45.00},
-        {"date": "2024-01-01", "price": 50.00}
-      ],
-      "current_price": 50.00,
-      "currency": "USD"
-    },
-    {
-      "product_id": 109,
-      "price_changes": [
-        {"date": "2023-08-10", "price": 220.00},
-        {"date": "2023-11-20", "price": 210.00},
-        {"date": "2024-02-01", "price": 215.00}
-      ],
-      "current_price": 215.00,
-      "currency": "EUR"
-    },
-    {
-      "product_id": 110,
-      "price_changes": [
-        {"date": "2023-09-01", "price": 130.00},
-        {"date": "2023-12-15", "price": 125.00},
-        {"date": "2024-03-01", "price": 135.00}
-      ],
-      "current_price": 135.00,
-      "currency": "USD"
-    }
-  ]
-}
+[
+  {
+    "product_id": 101,
+    "price_changes": [
+      {"date": "2023-01-01", "price": 50.00},
+      {"date": "2023-03-15", "price": 55.00},
+      {"date": "2023-06-01", "price": 60.00}
+    ],
+    "current_price": 60.00,
+    "currency": "USD"
+  },
+  {
+    "product_id": 102,
+    "price_changes": [
+      {"date": "2023-02-10", "price": 120.00},
+      {"date": "2023-04-20", "price": 110.00},
+      {"date": "2023-07-01", "price": 115.00}
+    ],
+    "current_price": 115.00,
+    "currency": "EUR"
+  },
+  {
+    "product_id": 103,
+    "price_changes": [
+      {"date": "2023-01-15", "price": 200.00},
+      {"date": "2023-05-01", "price": 180.00},
+      {"date": "2023-08-01", "price": 190.00}
+    ],
+    "current_price": 190.00,
+    "currency": "GBP"
+  },
+  {
+    "product_id": 104,
+    "price_changes": [
+      {"date": "2023-03-01", "price": 75.00},
+      {"date": "2023-06-15", "price": 80.00},
+      {"date": "2023-09-01", "price": 85.00}
+    ],
+    "current_price": 85.00,
+    "currency": "USD"
+  },
+  {
+    "product_id": 105,
+    "price_changes": [
+      {"date": "2023-04-01", "price": 150.00},
+      {"date": "2023-07-15", "price": 140.00},
+      {"date": "2023-10-01", "price": 145.00}
+    ],
+    "current_price": 145.00,
+    "currency": "EUR"
+  },
+  {
+    "product_id": 106,
+    "price_changes": [
+      {"date": "2023-05-10", "price": 90.00},
+      {"date": "2023-08-20", "price": 95.00},
+      {"date": "2023-11-01", "price": 100.00}
+    ],
+    "current_price": 100.00,
+    "currency": "USD"
+  },
+  {
+    "product_id": 107,
+    "price_changes": [
+      {"date": "2023-06-01", "price": 300.00},
+      {"date": "2023-09-15", "price": 280.00},
+      {"date": "2023-12-01", "price": 290.00}
+    ],
+    "current_price": 290.00,
+    "currency": "GBP"
+  },
+  {
+    "product_id": 108,
+    "price_changes": [
+      {"date": "2023-07-01", "price": 40.00},
+      {"date": "2023-10-15", "price": 45.00},
+      {"date": "2024-01-01", "price": 50.00}
+    ],
+    "current_price": 50.00,
+    "currency": "USD"
+  },
+  {
+    "product_id": 109,
+    "price_changes": [
+      {"date": "2023-08-10", "price": 220.00},
+      {"date": "2023-11-20", "price": 210.00},
+      {"date": "2024-02-01", "price": 215.00}
+    ],
+    "current_price": 215.00,
+    "currency": "EUR"
+  },
+  {
+    "product_id": 110,
+    "price_changes": [
+      {"date": "2023-09-01", "price": 130.00},
+      {"date": "2023-12-15", "price": 125.00},
+      {"date": "2024-03-01", "price": 135.00}
+    ],
+    "current_price": 135.00,
+    "currency": "USD"
+  }
+]

@@ -29,7 +29,6 @@ services:
       - 27017:27017
     volumes:
       - mongo-data:/data/db
-      - ./mongo:/docker-entrypoint-initdb.d/mongo
 #  postgres-destination:
 #    image: postgres:latest
 #    container_name: postgres-destination
