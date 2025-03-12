@@ -5,9 +5,9 @@ HOST=localhost
 PORT=27017
 DATABASE=origin
 
-for FILE in ./data/*; do
+for FILE in /sample_data/*; do
 	mongoimport \
-  -c EventLogs \
+  -c "${FILE%.*}" \
   --type json \
   --file $FILE \
   --jsonArray \
