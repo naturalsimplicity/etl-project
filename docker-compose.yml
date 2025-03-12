@@ -1,6 +1,6 @@
 x-airflow-common:
   &airflow-common
-  build: airflow/
+  image: apache/airflow:2.7.2
   env_file:
     - airflow/.env-dev
   volumes:
