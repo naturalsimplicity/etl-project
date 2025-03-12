@@ -1,17 +1,14 @@
 #!/bin/bash
-USER=mongo_user
-PASSWORD=mongo_password
 HOST=localhost
 PORT=27017
-DATABASE=origin
 
 for FILE in /sample_data/*; do
 	mongoimport \
-  -c "${FILE%.*}" \
+  -c "$(basename "${FILE%.*}")" \
   --type json \
   --file $FILE \
   --jsonArray \
   --authenticationDatabase=admin \
-  "mongodb://${USER}:${PASSWORD}@${HOST}:${PORT}/${DATABASE}?authSource=admin"
+  "mongodb://${MONGO_INITDB_ROOT_USERNAME}:${MONGO_INITDB_ROOT_PASSWORD}@${HOST}:${PORT}/${MONGO_INITDB_DATABASE}?authSource=admin"
   # "mongodb://mongo_user:mongo_password@localhost:27017/origin?authSource=admin"
 done;
