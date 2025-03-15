@@ -46,8 +46,7 @@ services:
     container_name: eshop
     env_file:
       - .env
-    command: ["python", "-m", "main.py"]
-#    command: ["bash", "-c", "cd database && alembic upgrade head"]
+    command: ["bash", "-c", "cd database && alembic upgrade head"]
   airflow-postgres:
     image: postgres:13
     environment:
