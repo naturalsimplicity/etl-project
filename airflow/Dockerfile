@@ -8,10 +8,10 @@ ENV AIRFLOW_HOME=/usr/local/airflow
 RUN pip install pymongo faker apache-airflow-providers-mongo
 
 # Switch to the root user
-USER root
+# USER root
 
 # Create the AIRFLOW_HOME directory and change its ownership to the airflow user
-RUN mkdir -p ${AIRFLOW_HOME} && chown -R airflow: ${AIRFLOW_HOME}
+# RUN mkdir -p ${AIRFLOW_HOME} && chown -R airflow: ${AIRFLOW_HOME}
 
 # Switch back to the airflow user
 USER airflow
