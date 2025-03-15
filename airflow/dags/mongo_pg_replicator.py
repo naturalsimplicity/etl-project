@@ -123,8 +123,8 @@ def mongo_pg_replicator():
                     f"""insert into {table_name} (query_id, user_id, query_text, timestamp, category,
                     price_range, results_count, etl_valid_from)
                     values (%s, %s, %s, %s, %s, %s, %s, %s)""",
-                    (doc["query_id"], doc["user_id"], doc["query_text"], doc["timestamp"], doc["category"],
-                    doc["price_range"], doc["results_count"], datetime.now())
+                    (doc["query_id"], doc["user_id"], doc["query_text"], doc["timestamp"], doc["filters"]["category"],
+                    doc["filters"]["price_range"], doc["results_count"], datetime.now())
                 )
                 counter += 1
         pg.commit()
