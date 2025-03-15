@@ -1,15 +1,14 @@
 from typing import Callable
-import os
 import logging
 
 from airflow.decorators import dag, task
 from airflow.models.baseoperator import chain
 from airflow.providers.mongo.hooks.mongo import MongoHook
 from datetime import datetime, timedelta
-from samples import generator
+from data_generators import generator
 
-_MONGO_DB_CONN = os.getenv("MONGO_DB_CONN")
-_MONGO_DB_DATABASE_NAME = os.getenv("MONGO_DB_DATABASE_NAME")
+_MONGO_DB_CONN = "mongo_db"
+_MONGO_DB_DATABASE_NAME = "origin"
 
 log = logging.getLogger("airflow.task")
 
