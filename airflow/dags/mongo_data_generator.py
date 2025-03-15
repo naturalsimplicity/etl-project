@@ -7,7 +7,7 @@ from airflow.providers.mongo.hooks.mongo import MongoHook
 from datetime import datetime, timedelta
 from data_generators import generator
 
-_MONGO_DB_CONN = "mongo_db"
+_MONGO_DB_CONN = "mongo_db_conn"
 _MONGO_DB_DATABASE_NAME = "origin"
 
 log = logging.getLogger("airflow.task")
@@ -26,7 +26,7 @@ def _insert_docs(collection_name: str, gen_func: Callable, sample_size=10, inser
         db.create_collection(collection_name)
         log.info(f"Created collection {collection_name}")
     collection = db[collection_name]
-    if insert_once and len(db.find({}, limit=1)) > 0:
+    if insert_once and len(list(collection.find({}, limit=1))) > 0:
         log.info(f"Collection {collection_name} already have documents, skipping")
         return
     collection.insert_many([gen_func(i+1) for i in range(sample_size)])
@@ -34,14 +34,14 @@ def _insert_docs(collection_name: str, gen_func: Callable, sample_size=10, inser
 
 default_args = {
     'owner': 'matvey',
-    'retries': 2,
+    'retries': 0,
     'retry_delay': timedelta(minutes=5)
 }
 
 @dag(
     default_args=default_args,
     start_date=datetime(2025, 3, 14, 12),
-    schedule_interval='5 * * * *',  # every 5 minutes
+    schedule_interval='*/5 * * * *',  # every 5 minutes
     catchup=False
 )
 def mongo_data_generator():

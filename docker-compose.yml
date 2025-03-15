@@ -41,6 +41,12 @@ services:
       - 5433:5433
     volumes:
       - postgres-data:/var/lib/postgresql/data
+  eshop:
+    build: ./eshop
+    container_name: eshop
+    env_file:
+      - .env
+    command: ["bash", "-c", "cd database && alembic upgrade head"]
   airflow-postgres:
     image: postgres:13
     environment:

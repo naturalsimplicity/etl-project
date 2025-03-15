@@ -16,7 +16,7 @@ def gen_event_logs(id_=1) -> dict:
             "user_login", "product_view", "order_placed", "user_logout", "cart_update",
             "payment_failed", "user_registration", "product_review", "search_query", "password_reset"]),
         "details": {
-            "user_id": fake.random_int(1, 100),
+            "user_id": fake.random_int(1, MAX_USERS),
             "ip_address": fake.ipv4(),
             "status": fake.random_element(["success", "error"])
         }
@@ -39,14 +39,14 @@ def gen_moderation_queue(id_=1) -> dict:
 def gen_product_price_history(id_=1) -> dict:
     price_changes = [
         {
-            "date": fake.date_between(start_date=MIN_DATETIME, end_date=MAX_DATETIME),
+            "timestamp": fake.date_time_between(start_date=MIN_DATETIME, end_date=MAX_DATETIME),
             "price": fake.pyfloat(min_value=1, max_value=1000)
         } for _ in range(fake.random_int(1, 20))
     ]
     return {
         "product_id": id_,
         "price_changes": price_changes,
-        "current_price": sorted(price_changes, key=lambda x: x['date'])[-1]['price'],
+        "current_price": sorted(price_changes, key=lambda x: x['timestamp'])[-1]['price'],
         "currency": fake.random_element(["USD", "EUR"])
     }
 
