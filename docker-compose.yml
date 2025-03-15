@@ -43,8 +43,10 @@ services:
       - postgres-data:/var/lib/postgresql/data
   airflow-postgres:
     image: postgres:13
-    env_file:
-      airflow/.env-dev
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_USER}
+      POSTGRES_DB: ${POSTGRES_DB}
     logging:
       options:
         max-size: 10m
