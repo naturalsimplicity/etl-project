@@ -38,4 +38,10 @@ HSE ETL processes project
 
 #### Postgres
 
-    
+    Connection Id: postgres_conn
+    Connection Type: Postgres
+    Host: postgres-destination
+    Database: destination
+    Login: <username from .env>
+    Password: <password from .env>
+    Port: 5433
