@@ -1,5 +1,5 @@
 # Use the official Airflow image as the base
-FROM apache/airflow:2.7.2
+FROM apache/airflow:2.10.5
 
 # Set the AIRFLOW_HOME environment variable
 ENV AIRFLOW_HOME=/usr/local/airflow
