@@ -62,7 +62,7 @@ def pg_datamart_loader():
                   sessions as
                     (select user_id,
                             count(*) as sessions_cnt,
-                            avg(pages_visited) as avg_pages_visited
+                            avg(array_length(pages_visited), 1) as avg_pages_visited
                      from user_sessions
                      group by user_id
                     )
