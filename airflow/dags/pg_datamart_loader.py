@@ -48,7 +48,7 @@ def pg_datamart_loader():
                     (select user_id,
                             count(distinct timestamp::date) as days_active,
                             count(distinct case when timestamp > current_date - 30 then timestamp::date end) as days_active_last_month,
-                            sum(case when event_type = 'order_placed' then 1 else 0) as orders_cnt
+                            sum(case when event_type = 'order_placed' then 1 else 0 end) as orders_cnt
                      from event_logs el
                      group by user_id
                     ),
