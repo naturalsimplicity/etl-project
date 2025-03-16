@@ -1,0 +1,84 @@
+x-airflow-common:
+  &airflow-common
+  build: ./airflow
+  env_file:
+    - .env
+  volumes:
+    - ./airflow/dags:/usr/local/airflow/dags
+    - ./airflow/logs:/usr/local/airflow/logs
+    - ./airflow/config:/usr/local/airflow/config
+    - ./airflow/plugins:/usr/local/airflow/plugins
+  depends_on:
+    airflow-postgres:
+      condition: service_healthy
+  logging:
+    options:
+      max-size: 10m
+      max-file: "3"
+services:
+  mongo-origin:
+    image: mongo:latest
+    container_name: mongo-origin
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_DB_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_DB_PASSWORD}
+      MONGO_INITDB_DATABASE: ${MONGO_DB_DATABASE_NAME}
+    ports:
+      - 27017:27017
+    volumes:
+      - mongo-data:/data/db
+#      - ./mongo/data:/sample_data
+#      - ./mongo/init.sh:/docker-entrypoint-initdb.d/init.sh
+  postgres-destination:
+    image: postgres:latest
+    container_name: postgres-destination
+    environment:
+      POSTGRES_USER: ${POSTGRES_DEST_USERNAME}
+      POSTGRES_PASSWORD: ${POSTGRES_DEST_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DEST_DATABASE_NAME}
+      PGPORT: 5433
+    ports:
+      - 5433:5433
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+  eshop:
+    build: ./eshop
+    container_name: eshop
+    env_file:
+      - .env
+    command: ["bash", "-c", "cd database && alembic upgrade head"]
+  airflow-postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    volumes:
+      - airflow-postgres-data:/var/lib/postgresql/data
+    logging:
+      options:
+        max-size: 10m
+        max-file: "3"
+    healthcheck:
+      test: [ "CMD", "pg_isready", "-U", "airflow" ]
+  airflow-webserver:
+    <<: *airflow-common
+    restart: always
+    command: webserver
+    ports:
+      - "8080:8080"
+    healthcheck:
+      test: [ "CMD-SHELL", "[ -f /usr/local/airflow/airflow-webserver.pid ]" ]
+      interval: 30s
+      timeout: 30s
+      retries: 3
+  airflow-scheduler:
+    <<: *airflow-common
+    command: scheduler
+    restart: always
+    ports:
+      - "8793:8793"
+volumes:
+  postgres-data:
+  airflow-postgres-data:
+  mongo-data:
