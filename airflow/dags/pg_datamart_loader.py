@@ -104,7 +104,7 @@ def pg_datamart_loader():
                     ),
                   responses as 
                     (select ticket_id,
-                            extract(minute from avg(response_time)) as avg_response_time_min
+                            extract(epoch from avg(response_time))/60 as avg_response_time_min
                      from (select ticket_id,
                                   case
                                     when sender = 'user'
