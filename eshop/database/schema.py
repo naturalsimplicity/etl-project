@@ -1,4 +1,3 @@
-from flask.cli import prepare_import
 from sqlalchemy import (
     Column, Integer, MetaData, String, Table, SmallInteger, table, Numeric
 )

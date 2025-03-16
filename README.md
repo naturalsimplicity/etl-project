@@ -1,5 +1,6 @@
-# etl-project
-HSE ETL processes project
+# HSE ETL processes project
+
+
 
 ## Деплой
 
@@ -45,3 +46,7 @@ HSE ETL processes project
     Login: <username from .env>
     Password: <password from .env>
     Port: 5433
+
+## Описание витрин
+
+### 
