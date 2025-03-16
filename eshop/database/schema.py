@@ -1,3 +1,4 @@
+from flask.cli import prepare_import
 from sqlalchemy import (
     Column, Integer, MetaData, String, Table, SmallInteger, table, Numeric
 )
@@ -131,5 +132,33 @@ user_session_actions = Table(
     Column('action_type', String(255), nullable=False),
     Column('element', String(255), nullable=True),
     Column('timestamp', TIMESTAMP, nullable=False),
+    Column('etl_valid_from', TIMESTAMP, nullable=False)
+)
+
+user_activity = Table(
+    'user_activity',
+    metadata,
+    Column('user_id', Integer, primary_key=True),
+    Column('sessions_cnt', Integer, nullable=False),
+    Column('avg_pages_visited', Numeric, nullable=False),
+    Column('days_active', Integer, nullable=False),
+    Column('days_active_last_month', Integer, nullable=False),
+    Column('reviews_cnt', Integer, nullable=False),
+    Column('preferred_category', String(255)),
+    Column('etl_valid_from', TIMESTAMP, nullable=False)
+)
+
+support_efficiency = Table(
+    'support_efficiency',
+    metadata,
+    Column('ticket_id', UUID, primary_key=True),
+    Column('user_id', Integer, nullable=False),
+    Column('status', String(255), nullable=False),
+    Column('issue_type', String(255), nullable=False),
+    Column('first_message_dt', TIMESTAMP, nullable=False),
+    Column('last_message_dt', TIMESTAMP, nullable=False),
+    Column('support_messages', Integer, nullable=False),
+    Column('user_messages', Integer, nullable=False),
+    Column('avg_response_time_min', Numeric),
     Column('etl_valid_from', TIMESTAMP, nullable=False)
 )
