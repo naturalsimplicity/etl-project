@@ -142,6 +142,7 @@ user_activity = Table(
     Column('avg_pages_visited', Numeric, nullable=False),
     Column('days_active', Integer, nullable=False),
     Column('days_active_last_month', Integer, nullable=False),
+    Column('orders_cnt', Integer, nullable=False),
     Column('reviews_cnt', Integer, nullable=False),
     Column('preferred_category', String(255)),
     Column('etl_valid_from', TIMESTAMP, nullable=False)

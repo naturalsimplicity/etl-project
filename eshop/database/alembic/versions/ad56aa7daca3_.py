@@ -40,6 +40,7 @@ def upgrade() -> None:
     sa.Column('avg_pages_visited', sa.Numeric(), nullable=False),
     sa.Column('days_active', sa.Integer(), nullable=False),
     sa.Column('days_active_last_month', sa.Integer(), nullable=False),
+    sa.Column('orders_cnt', sa.Integer(), nullable=False),
     sa.Column('reviews_cnt', sa.Integer(), nullable=False),
     sa.Column('preferred_category', sa.String(length=255), nullable=True),
     sa.Column('etl_valid_from', postgresql.TIMESTAMP(), nullable=False),
