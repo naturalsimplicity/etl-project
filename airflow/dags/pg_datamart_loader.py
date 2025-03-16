@@ -69,9 +69,9 @@ def pg_datamart_loader():
                 select s.user_id,
                        s.sessions_cnt,
                        s.avg_pages_visited,
-                       coalesce(u.days_active, 0) as days_active,
-                       coalesce(u.days_active_last_month, 0) as days_active_last_month,
-                       coalesce(u.orders_cnt, 0) as orders_cnt,
+                       coalesce(e.days_active, 0) as days_active,
+                       coalesce(e.days_active_last_month, 0) as days_active_last_month,
+                       coalesce(e.orders_cnt, 0) as orders_cnt,
                        coalesce(r.reviews_cnt, 0) as reviews_cnt,
                        se.preferred_category,
                        current_timestamp as etl_valid_from
